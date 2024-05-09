@@ -1,0 +1,113 @@
+(1.adım) 2 müşteri 2 öncelikli
+(2.adım) 2 müşteri 2 öncelikli
+(3.adım) 2 müşteri 2 öncelikli
+(4.adım) 2 müşteri 2 öncelikli
+16 Müşteri geldi.
+1 Nolu müşteri oturdu.
+2 Nolu müşteri oturdu.
+3 Nolu müşteri oturdu.
+4 Nolu müşteri oturdu.
+5 Nolu müşteri oturdu.
+6 Nolu müşteri oturdu.
+10 Müşteri beklemede.
+Aşçı 2 bekleme durumuna geçti.
+Aşçı 1 bekleme durumuna geçti.
+3 Nolu garson 3 Nolu müşterinin siparişini aldı: (Masa 3)
+1 Nolu garson 1 Nolu müşterinin siparişini aldı: (Masa 1)
+2 Nolu garson 2 Nolu müşterinin siparişini aldı: (Masa 2)
+2 Nolu garson 2 Nolu müşterinin siparişini aşçıya iletti: (Masa 2)
+1 Nolu garson 1 Nolu müşterinin siparişini aşçıya iletti: (Masa 1)
+3 Nolu garson 3 Nolu müşterinin siparişini aşçıya iletti: (Masa 3)
+3 Nolu müşteriden sipariş geldi! (Masa 3)
+1 Nolu müşteriden sipariş geldi! (Masa 1)
+2 Nolu müşteriden sipariş geldi! (Masa 2)
+2 Nolu aşçı 3 Nolu müşterinin siparişini hazırlamaya başladı.
+1 Nolu aşçı 1 Nolu müşterinin siparişini hazırlamaya başladı.
+3 Nolu garson 4 Nolu müşterinin siparişini aldı: (Masa 4)
+1 Nolu garson 5 Nolu müşterinin siparişini aldı: (Masa 5)
+2 Nolu garson 6 Nolu müşterinin siparişini aldı: (Masa 6)
+2 Nolu aşçı 3 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+1 Nolu aşçı 1 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 1 bekleme durumuna geçti.
+2 Nolu aşçı 2 Nolu müşterinin siparişini hazırlamaya başladı.
+1 Nolu garson 5 Nolu müşterinin siparişini aşçıya iletti: (Masa 5)
+5 Nolu müşteriden sipariş geldi! (Masa 5)
+2 Nolu garson 6 Nolu müşterinin siparişini aşçıya iletti: (Masa 6)
+6 Nolu müşteriden sipariş geldi! (Masa 6)
+3 Nolu garson 4 Nolu müşterinin siparişini aşçıya iletti: (Masa 4)
+4 Nolu müşteriden sipariş geldi! (Masa 4)
+1 Nolu aşçı 5 Nolu müşterinin siparişini hazırlamaya başladı.
+2 Nolu aşçı 2 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+2 Nolu aşçı 6 Nolu müşterinin siparişini hazırlamaya başladı.
+3 Nolu müşteri ödeme için bekliyor.
+1 Nolu müşteri ödeme için bekliyor.
+3 Nolu müşterinin ödemesi alınıyor.
+1 Nolu aşçı 5 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+1 Nolu aşçı 4 Nolu müşterinin siparişini hazırlamaya başladı.
+2 Nolu müşteri ödeme için bekliyor.
+2 Nolu aşçı 6 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 2 bekleme durumuna geçti.
+3 Nolu müşterinin ödemesi tamamlandı.
+3 Nolu müşteri restorandan ayrıldı.
+1 Nolu müşterinin ödemesi alınıyor.
+7 Nolu müşteri oturdu.
+5 Nolu müşteri ödeme için bekliyor.
+1 Nolu aşçı 4 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 1 bekleme durumuna geçti.
+1 Nolu garson 7 Nolu müşterinin siparişini aldı: (Masa 3)
+1 Nolu müşterinin ödemesi tamamlandı.
+1 Nolu müşteri restorandan ayrıldı.
+6 Nolu müşteri ödeme için bekliyor.
+2 Nolu müşterinin ödemesi alınıyor.
+8 Nolu müşteri oturdu.
+1 Nolu garson 7 Nolu müşterinin siparişini aşçıya iletti: (Masa 3)
+7 Nolu müşteriden sipariş geldi! (Masa 3)
+2 Nolu aşçı 7 Nolu müşterinin siparişini hazırlamaya başladı.
+Aşçı 1 bekleme durumuna geçti.
+4 Nolu müşteri ödeme için bekliyor.
+3 Nolu garson 8 Nolu müşterinin siparişini aldı: (Masa 1)
+2 Nolu müşterinin ödemesi tamamlandı.
+2 Nolu müşteri restorandan ayrıldı.
+2 Nolu aşçı 7 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 2 bekleme durumuna geçti.
+5 Nolu müşterinin ödemesi alınıyor.
+11 Nolu müşteri oturdu.
+3 Nolu garson 8 Nolu müşterinin siparişini aşçıya iletti: (Masa 1)
+8 Nolu müşteriden sipariş geldi! (Masa 1)
+1 Nolu aşçı 8 Nolu müşterinin siparişini hazırlamaya başladı.
+Aşçı 2 bekleme durumuna geçti.
+2 Nolu garson 11 Nolu müşterinin siparişini aldı: (Masa 2)
+Uzun süreli bekleme sebebiyle 13 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 9 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 12 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 15 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 14 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 10 nolu müşteri restorandan ayrıldı.
+Uzun süreli bekleme sebebiyle 16 nolu müşteri restorandan ayrıldı.
+7 Nolu müşteri ödeme için bekliyor.
+5 Nolu müşterinin ödemesi tamamlandı.
+5 Nolu müşteri restorandan ayrıldı.
+6 Nolu müşterinin ödemesi alınıyor.
+2 Nolu garson 11 Nolu müşterinin siparişini aşçıya iletti: (Masa 2)
+11 Nolu müşteriden sipariş geldi! (Masa 2)
+2 Nolu aşçı 11 Nolu müşterinin siparişini hazırlamaya başladı.
+1 Nolu aşçı 8 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 1 bekleme durumuna geçti.
+6 Nolu müşterinin ödemesi tamamlandı.
+6 Nolu müşteri restorandan ayrıldı.
+2 Nolu aşçı 11 Nolu müşterinin siparişini hazırladı. Sipariş teslim edildi.
+Aşçı 2 bekleme durumuna geçti.
+4 Nolu müşterinin ödemesi alınıyor.
+8 Nolu müşteri ödeme için bekliyor.
+11 Nolu müşteri ödeme için bekliyor.
+4 Nolu müşterinin ödemesi tamamlandı.
+4 Nolu müşteri restorandan ayrıldı.
+7 Nolu müşterinin ödemesi alınıyor.
+7 Nolu müşterinin ödemesi tamamlandı.
+7 Nolu müşteri restorandan ayrıldı.
+8 Nolu müşterinin ödemesi alınıyor.
+8 Nolu müşterinin ödemesi tamamlandı.
+8 Nolu müşteri restorandan ayrıldı.
+11 Nolu müşterinin ödemesi alınıyor.
+11 Nolu müşterinin ödemesi tamamlandı.
+11 Nolu müşteri restorandan ayrıldı.
