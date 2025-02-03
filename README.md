@@ -1,22 +1,93 @@
-# restaurant-management-system-threads
-Proje kapsaminda ogrencilerin isletim sistemlerinin temel kavramlarini (thread yonetimi ve senkronizasyon mekanizmalari) anlamalari ve bu kavramlari bir simulasyon uzerinde uygulamalari hedeflenmektedir. Projede bir restoran yonetim sistemi gerceklestirmeniz beklenmektedir. Bu proje bir restoranin gunluk isleyisini simule eden bir multithread uygulamasidir. Buradaki amac, gercek zamanli bir ortamda thread senkronizasyonu ve kaynak yonetimi konseptlerini uygulamaktir. Restoranda, musteri gruplari, garsonlar, ascilar ve bir kasa elemani bulunmaktadir. Her bir rol, farkli gorevleri ve sorumluluklari olan ayri bir thread olarak islenecektir. Uygulama arayuzden calistirilacaktir.
+# Restaurant Management System Threads
 
-Programlama Dili: Herhangi bir programlama dilini kullanarak Masaustu simulasyon uygulamasi yapilmasi hedeflenmistir.
+**Hazırlayanlar:** Fatma Nur Kurt, Esin Özdemir
+---
 
-Surecin asagidaki sekilde ilerlemesi istenmektedir:
+## Proje Amacı
 
-Musterilerin siraya girmesi
-Garsonlarin siparis almasi
-Ascilarin siparisleri hazirlamasi
-Musterilerin siparisleri odemesi
-Her musteri, restorana giris yaparken bir thread olarak olusturulur. Her garson, musterilere hizmet vermek icin ayri bir thread'de calisir. Her asci, yemek hazirlama surecini yonetmek icin kendi thread'inde calisir. Kasa islemleri, odeme alma ve hesap kapatma (masanin uygun duruma gelmesi) islemleri icin ayri bir thread'de gerceklesir.
+Bu proje, işletim sistemlerinin temel kavramlarından olan thread yönetimi ve senkronizasyon mekanizmalarını anlamak amacıyla geliştirilmiştir. Uygulama, bir restoranın günlük işleyişini simüle eden multithread tabanlı bir masaüstü uygulamasıdır. Proje ile gerçek zamanlı ortamda thread senkronizasyonu, kaynak yönetimi ve GUI tasarımı konularında pratik yapılması hedeflenmektedir.
 
-Musteri thread'leri arasinda masa secimi ve oturma sirasi icin senkronizasyon gerekir. Garson thread'leri, siparisleri alirken ve islerken diger garsonlarla koordineli calismalidir. Ayni masaya birden fazla garsonun bakmasi onlenmelidir. Ascı thread'leri, sinirli sayida ocakta yemek hazirlarken birbirleriyle uyum icinde olmalidir. Ayni siparisi birden fazla ascinin hazirlamasi engellenmelidir. Kasa thread'i, her seferinde yalnizca bir siparisin odemesini isleyebilir.
 
-Her masa dolu oldugunda yeni gelen musteri bir bekleme listesine alinir. Bos masa oldugunda musteri sirasina gore uygun musteri masaya yerlestirilir. Proje kapsaminda musteriler iki farkli kategoride degerlendirilebilir: Normal musteriler ve oncelikli musteriler (65 yas ve uzeri). Oncelikli musteriler restorana geldiklerinde, normal musterilerin onune gecmelidir. Bu durum masalara oturma sirasinda oncelikli musteri avantaji saglamalidir. Bos masa varken garsonlar bekleme durumundadir. Masa doldukca garsonlar sirayla musterilerden siparis alir. Ayni anda gelen olursa rastgele siparis alimi yapabilir. Her garson ayni anda sadece bir musterinin siparisini alabilir. Ascilar siparis gelene kadar bekler. Siparis geldikten sonra yemek yapmaya baslarlar. Yemek hazir oldukca siradaki siparisleri hazirlamaya baslarlar. Siparis alindiginda, her bir asci ayni anda en fazla 2 yemek hazirlayabilir. Siparis hazir olduktan sonra musteriler yemek yemeye baslar. Musteriler yemek yerken, kasa islemleri icin beklemelidir. Yemek biten masanin odemesi kasa tarafindan alinir. Kasa her seferinde sadece 1 siparisin odemesini gerceklestirebilir. Musteri Bekleme Suresi: Yeni musteri restorana geldiginde tum masalar doluysa 20 saniye suren bir bekleme suresi simule edilir. 20 saniye sonra musteri restorandan ayrilmaktadir. Siparis Alma Suresi: Garsonlarin musterilerden siparis almasi 2 saniye surer. Yemek Hazirlama Suresi: Ascilar siparis aldiktan sonra yemek hazirlamaya baslarlar ve bu surec 3 saniye surer. Yemek Yeme Suresi: Musterilerin yemek yeme suresi 3 saniye olarak ayarlanir. Odeme Islemi Süresi: Müşteriler yemeklerini bitirdikten sonra, ödeme işleminin gerçekleşmesi 1 saniye sürer. Tüm adımlar anlık olarak bir metin dosyasına yazdırılması istenmektedir.
+---
 
-Projede temel olarak problem-1 ve problem-2 olmak üzere 2 adet problem verilmiştir.
+## Temel Özellikler
 
-Problem 1: Restoranda belirli sayıda masa, garson, aşçı ve kasa bulunduğunda, bu kaynakların etkileşimini ve işleyişini nasıl simüle edilir? Uygulama çalıştırıldığında müşterilerin gelme sırası belirlenerek projenin özellikleri ve süreler dikkate alınarak simülasyon gerçekleştirilir. İşlem sırası geldiğinde kullanıcı onayıyla işlemler yürütülür. Simülasyon başlangıcında müşteri senaryosu belirlenir. Bu aşamada, zaman sınırlamalarına bağlı kalmaksızın müşterilerin öncelik düzeylerinin belirlenmesi hedeflenmektedir. Restoranda başlangıçta 6 masa, 3 garson, 2 aşçı ve 1 kasa bulunmaktadır. Aynı anda en fazla 10 müşteri gelebilir.
+- **Thread Kullanımı:**  
+  Her müşteri, garson, aşçı ve kasa işlemi ayrı bir thread olarak çalışır.  
+  - Müşteri thread’leri; restorana giriş, masa seçimi ve oturma işlemleri için oluşturulur.
+  - Garson thread’leri; sipariş alma ve müşteriden sipariş alındıktan sonra siparişi aşçılara iletme işlemlerini gerçekleştirir.
+  - Aşçı thread’leri; gelen siparişleri hazırlamak için çalışır.
+  - Kasa thread’i; ödeme alma ve hesap kapatma işlemlerini tek bir thread üzerinden yönetir.
 
-Problem 2: Dinamik bir müşteri akışında; hangi sayıda masa, garson ve aşçı çalıştırılırsa en fazla kazanç sağlanır? Sabit Akış Modeli: Toplam süre, müşteri gelme aralığı uygulamada belirlenmelidir. Örnek: Her 5 saniyede 4 müşteri gelmektedir ve 1'i öncelikli olmaktadır. 3 dakikalık sürede gelecek müşteriye göre restoranın maksimum kapasitesi hesaplanır (masa, garson, aşçı). Belirlenen simülasyon adımı içerisinde maksimum verimle kaynakların çalışması beklenmektedir. Maliyetler: Masa Maliyeti: Her masa için maliyet 1 birim olarak kabul edilir. Garson Maliyeti: Her garson için maliyet 1 birim olarak kabul edilir. Aşçı Maliyeti: Her aşçı için maliyet 1 birim olarak kabul edilir. Müşteri Kazancı: Her müşteri başına elde edilen kazanç 1 birim olarak hesaplanır. Bir problem için bulunan çözüm senaryolarını ve en iyi çözümü göstermeniz beklenmektedir.
+- **Senkronizasyon:**  
+  - Müşteriler arasında masa seçimi ve oturma sırası senkronize edilir.
+  - Aynı masaya birden fazla garsonun hizmet vermesi engellenir.
+  - Aşçılar, aynı siparişi aynı anda hazırlamamaları için senkronize çalışır.
+  - Kasa, her seferinde yalnızca bir siparişin ödemesini işleyerek kaynakların düzgün yönetilmesini sağlar.
+
+- **Öncelikli Müşteri Avantajı:**  
+  - Müşteriler iki kategoriye ayrılır: Normal ve 65 yaş üzeri (öncelikli).  
+  - Öncelikli müşteriler, boş masa bulunması durumunda normal müşterilerin önüne geçerek yerleştirilir.
+
+- **Zaman Süreleri:**  
+  - Müşteri bekleme süresi: 20 saniye  
+  - Sipariş alma süresi: 2 saniye  
+  - Yemek hazırlama süresi: 3 saniye  
+  - Yemek yeme süresi: 3 saniye  
+  - Ödeme işlemi süresi: 1 saniye
+
+- **Raporlama:**  
+  Tüm simülasyon adımları ve işlemleri, anlık olarak bir metin dosyasına yazdırılarak takip edilebilir.
+
+---
+
+## Gereksinimler
+
+- **Programlama Dili:** Java  
+- **Teknolojiler:**  
+  - Thread yönetimi: Java'nın Thread, Runnable, synchronized, Lock ve ReentrantLock sınıfları  
+  - GUI: Java Swing  
+- **Simülasyon:** Gerçek zamanlı kaynak yönetimi ve senkronizasyon örnekleri
+
+---
+
+## Kurulum ve Başlatma
+
+1. **Proje Dosyalarını İndirme**
+    Projeyi GitHub üzerinden yerel makinenize klonlayabilirsiniz. Git arayüzünüzü kullanarak aşağıdaki komutu uygulayabilirsiniz:
+
+    ```bash
+    git clone https://github.com/Dawnfairy/restaurant-management-system-multithreading.git
+
+1. **Geliştirme Ortamını Ayarlayın:**
+
+   1. **IDE Seçimi:**  
+      Projeyi IntelliJ IDEA, Eclipse, VS Code veya tercih ettiğiniz herhangi bir Java IDE'sinde geliştirin.  
+      Multithread işlemleri için gerekli kütüphaneler (Java'nın standart kütüphaneleri) projeye dahildir.
+
+   2. **Projeyi Açma:**  
+      IDE'nizde "File > Open" veya "File > Open Folder..." seçeneklerini kullanarak proje klasörünü açın.
+
+2. **Projeyi Çalıştırma:**
+
+   - IDE üzerinden “Run” veya “Debug” seçeneklerini kullanarak projeyi derleyip çalıştırın.
+   - Uygulama açıldığında, ekranda yer alan simülasyonu başlatma butonuna tıklayarak sistemin adım adım ilerlemesini gözlemleyebilirsiniz.
+
+---
+
+## Kullanım
+
+- **Simülasyon Başlatma:**  
+  Uygulama arayüzü üzerinden simülasyon başlatılır.  
+- **Adım Adım İşlemler:**  
+  Müşteri girişi, sipariş alma, yemek hazırlama ve ödeme işlemleri, belirlenen zaman süreleri ve kullanıcı onayı ile adım adım gerçekleşir.  
+- **Raporlama:**  
+  Tüm adımlar, anlık olarak oluşturulan bir metin dosyasına yazdırılarak simülasyon sürecinin takip edilmesi sağlanır.
+
+---
+
+## İletişim
+
+Proje ile ilgili sorular, geri bildirimler veya katkı talepleri için aşağıdaki kişilerle iletişime geçebilirsiniz:
+
+  Fatma Nur Kurt - kurtfatmanur8@gmail.com
